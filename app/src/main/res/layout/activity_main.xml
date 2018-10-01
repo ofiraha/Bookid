@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/upper_bar"/>
+
+    <LinearLayout
+        android:layout_width="306dp"
+        android:layout_height="363dp"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="305dp"
+            android:layout_height="102dp"
+            android:layout_above="@+id/ToReadListButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_menu_button_turquoise"
+            android:onClick="openOcrActivity" />
+
+        <Button
+            android:id="@+id/ToReadListButton"
+            android:layout_width="305dp"
+            android:layout_height="102dp"
+            android:layout_above="@+id/libraryButton"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_menu_button_pink"
+            android:onClick="openToReadListActivity" />
+
+
+        <Button
+            android:id="@+id/libraryButton"
+            android:layout_width="305dp"
+            android:layout_height="102dp"
+            android:layout_above="@+id/buttonLogout"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="100dp"
+            android:background="@drawable/rounded_menu_button_orange"
+            android:onClick="openLibrary" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="85dp"
+        android:layout_height="21dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="37dp"
+        android:background="@drawable/style_logout_btn" />
+
+</RelativeLayout>
