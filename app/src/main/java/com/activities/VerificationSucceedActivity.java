@@ -27,10 +27,5 @@ public class VerificationSucceedActivity extends AppCompatActivity {
                 finish();
             }
         },3000);
-
-
-
     }
-
-
 }
