@@ -38,10 +38,8 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
     @Override
     public void onBindViewHolder(@NonNull ImageViewHolder holder, int position) {
         Upload uploadCurrent = mUploads.get(position);
-        holder.tvBookName.setText(uploadCurrent.getName());
         Picasso.get()
                 .load(uploadCurrent.getImageUrl())
-                .placeholder(R.drawable.emptybook)
                 .fit()
                 .centerCrop()
                 .into(holder.ivBookImg);
@@ -59,14 +57,12 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
 
     public class ImageViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener,
             View.OnCreateContextMenuListener, MenuItem.OnMenuItemClickListener{
-        public TextView tvBookName;
         public ImageView ivBookImg;
         public ImageView checkBox;
 
         public ImageViewHolder(View itemView) {
             super(itemView);
 
-            tvBookName = (TextView) itemView.findViewById(R.id.book_name);
             ivBookImg = (ImageView) itemView.findViewById(R.id.book_img);
             checkBox = (ImageView) itemView.findViewById(R.id.check_box);
 
