@@ -34,8 +34,8 @@
         android:id="@+id/btns"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
         android:layout_centerHorizontal="true"
         android:alpha="0.6">
 
@@ -44,7 +44,6 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/play"
-            android:padding="5dp"
             />
 
         <Button
@@ -52,7 +51,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/replay_btn"
-            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
             />
 
     </LinearLayout>
