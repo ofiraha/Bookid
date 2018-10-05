@@ -91,6 +91,10 @@ public class MainActivity extends Activity {
         startActivity(openLibraryActivity);
     }
 
+    public void appInformation(View view){
+        speak("welcome to bookid");
+    }
+
     @Override
     protected void onDestroy() {
         if (mTTS != null) {

@@ -4,12 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@android:color/white">
+    android:background="@drawable/upper_bar">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/upper_bar"/>
+    <Button
+        android:id="@+id/information_btn"
+        android:layout_width="80px"
+        android:layout_height="80px"
+        android:background="@drawable/information"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20px"
+        android:layout_marginRight="20px"
+        android:onClick="appInformation"/>
 
     <LinearLayout
         android:layout_width="306dp"

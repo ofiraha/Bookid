@@ -43,10 +43,18 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
                 .fit()
                 .centerCrop()
                 .into(holder.ivBookImg);
+
         if(uploadCurrent.isCheck()){
             holder.checkBox.setVisibility(View.VISIBLE);
         }else{
             holder.checkBox.setVisibility(View.INVISIBLE);
+        }
+
+        //take care of the last in list
+        if(uploadCurrent.getName().equals("plusBtn")){
+            holder.backgroundImg.setVisibility(View.INVISIBLE);
+        } else {
+            holder.backgroundImg.setVisibility(View.VISIBLE);
         }
     }
 
@@ -59,12 +67,14 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
             View.OnCreateContextMenuListener, MenuItem.OnMenuItemClickListener{
         public ImageView ivBookImg;
         public ImageView checkBox;
+        public ImageView backgroundImg;
 
         public ImageViewHolder(View itemView) {
             super(itemView);
 
             ivBookImg = (ImageView) itemView.findViewById(R.id.book_img);
             checkBox = (ImageView) itemView.findViewById(R.id.check_box);
+            backgroundImg = (ImageView) itemView.findViewById(R.id.background_img);
 
             itemView.setOnClickListener(this);
             itemView.setOnCreateContextMenuListener(this);

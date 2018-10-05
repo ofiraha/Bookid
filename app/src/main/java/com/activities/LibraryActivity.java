@@ -72,6 +72,11 @@ public class LibraryActivity extends AppCompatActivity implements VideoBookAdapt
         });
     }
 
+    public void backToMain(View view) {
+        Intent openMainActivity = new Intent(this, MainActivity.class);
+        startActivity(openMainActivity);
+    }
+
     @Override
     public void onItemClick(int position) {
         Intent openVideoActivity = new Intent(this, VideoActivity.class);

@@ -82,7 +82,7 @@ public class BookListActivity extends Activity implements ImageAdapter.OnItemCli
         mStorageRef = FirebaseStorage.getInstance().getReference().child("uploads");
         mProgressCircle = findViewById(R.id.progress_circle);
 
-        mProgressBar = findViewById(R.id.progress_bar);
+        mProgressBar = (ProgressBar) findViewById(R.id.progress_bar);
         Drawable progressDrawable = mProgressBar.getProgressDrawable().mutate();
         progressDrawable.setColorFilter(Color.BLUE, android.graphics.PorterDuff.Mode.SRC_IN);
         mProgressBar.setProgressDrawable(progressDrawable);
@@ -175,6 +175,7 @@ public class BookListActivity extends Activity implements ImageAdapter.OnItemCli
         if (bookImg != null) {
             //uploading the file
             StorageReference fileRef = mStorageRef.child(bookName + "." + System.currentTimeMillis());
+            mProgressBar.setVisibility(View.VISIBLE);
             mUploadTask = fileRef.putBytes(bookImg)
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
@@ -184,6 +185,7 @@ public class BookListActivity extends Activity implements ImageAdapter.OnItemCli
                                 @Override
                                 public void run() {
                                     mProgressBar.setProgress(0);
+                                    mProgressBar.setVisibility(View.INVISIBLE);
                                     imgTakenPic.setVisibility(View.GONE);
                                     mRecyclerView.setVisibility(View.VISIBLE);
                                 }
@@ -277,4 +279,8 @@ public class BookListActivity extends Activity implements ImageAdapter.OnItemCli
 
     }
 
+    public void backToMain(View view) {
+        Intent openMainActivity = new Intent(this, MainActivity.class);
+        startActivity(openMainActivity);
+    }
 }
