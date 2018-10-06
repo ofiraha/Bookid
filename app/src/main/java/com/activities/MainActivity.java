@@ -80,7 +80,7 @@ public class MainActivity extends Activity {
 
 
     public void openOcrActivity(View view) {
-        speak("please scan your book");
+        speak("for scanning, follow the book with the camera");
         Intent openOcrActivity = new Intent(this, OcrCaptureActivity.class);
         startActivity(openOcrActivity);
 
@@ -92,7 +92,8 @@ public class MainActivity extends Activity {
     }
 
     public void appInformation(View view){
-        speak("welcome to bookid");
+        speak("welcome to bookid. in order to start reading a new book ,press on the first button. in order to create your own book list, press on the pink button. and in order to see more books, press on the orange button." +
+                "Enjoy your book!");
     }
 
     @Override
