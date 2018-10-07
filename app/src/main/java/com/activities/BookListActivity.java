@@ -236,7 +236,6 @@ public class BookListActivity extends Activity implements ImageAdapter.OnItemCli
             captureCameraImage();
         }
         else {
-            onCheckClick(position);
             speak("for scanning, follow the book you have choose with the camera");
             Intent openOcrActivity = new Intent(this, OcrCaptureActivity.class);
             startActivity(openOcrActivity);

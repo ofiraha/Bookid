@@ -92,7 +92,7 @@ public class MainActivity extends Activity {
     }
 
     public void appInformation(View view){
-        speak("welcome to bookid. in order to start reading a new book ,press on the first button. in order to create your own book list, press on the pink button. and in order to see more books, press on the orange button." +
+        speak("welcome to bookid. in order to start reading a new book ,press on the blue button. in order to create your own book list, press on the pink button. and in order to see more books, press on the orange button." +
                 "Enjoy your book!");
     }
 
